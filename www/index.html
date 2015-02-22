@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <title>Pomodoro</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/pomodoro.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            <img src="img/tomato.png" alt="tomato">
+            Pomodoro
+        </h1>
+        <p class="message">
+            What's the pomodoro? Please access
+            <a href="http://pomodorotechnique.com/" target="_blank">here</a>.
+            <button id="all-clear" class="btn btn-danger pull-right">All Clear</button>
+        </p>
+
+        <div class="row">
+            <!-- timer START -->
+            <div class="col-md-4">
+                <div class="section"><span class="label label-info">Timer</span></div>
+                <div id="working-timer" class="text-center" data-percent="0">
+                    <span class="status">Working</span>
+                    <span id="working-time-view" class="time-view"></span>
+                </div>
+                <div id="resting-timer" class="text-center" data-percent="0">
+                    <span class="status">Resting</span>
+                    <span id="resting-time-view" class="time-view"></span>
+                </div>
+
+                <div class="timer-controller">
+                    <span id="start" class="btn btn-primary pull-left">START</span>
+                    <span id="pause" class="btn btn-default pull-left disabled">PAUSE</span>
+                    <span id="reset" class="btn btn-default pull-right">RESET</span>
+                </div>
+            </div>
+            <!-- timer END, todo START -->
+            <div class="col-md-4">
+                <div class="section"><span class="label label-info">ToDo</span></div>
+                <!-- "add task" START -->
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <div class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Add Task
+                                </a>
+                            </div>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <div>
+                                    <label for="pomodoro-num">Pomodoro number ( 1 pomodoro = 25 min ) </label>
+                                    <br>
+                                    <input id="pomodoro-num" type="number" min="1" max="8" value="1" class="pull-right"></input>
+                                    <br>
+                                    <label for="task">Task</label>
+                                    <textarea id="task" class="form-control" rows="3" placeholder="your task" maxlength="100"></textarea>
+                                    <div id="task-controller">
+                                        <button id="add-task" class="btn btn-primary pull-right">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- "add task" END, todo START -->
+                <div id="todo-area"></div>
+                <!-- todo END -->
+            </div>
+            <!-- todo end, done start -->
+            <div class="col-md-4">
+                <div class="section"><span class="label label-info">Done</span></div>
+                <div id="drop-here">Tap [Finish] button or drop here.</div>
+                <div id="done-area"></div>
+            </div>
+            <!-- done end -->
+        </div>
+        <!-- end row -->
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easypiechart.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/web-storage.js"></script>
+    <script src="js/date-formatter.js"></script>
+    <script src="js/pomodoro-timer.js"></script>
+    <script src="js/pomodoro-task.js"></script>
+    <!-- need for phonegap. Don't search cordova.js file -->
+    <script type="text/javascript" src="cordova.js"></script>
+</body>
+
+</html>

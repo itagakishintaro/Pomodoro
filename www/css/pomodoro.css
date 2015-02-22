@@ -1,0 +1,63 @@
+.status{
+	position: absolute;
+	width: 210px;
+	margin: 3em 0;
+	font-size: large;
+}
+.time-view{
+	position: absolute;
+	width: 210px;
+	margin: 5em 0;
+	font-size: large;
+}
+.timer-controller{
+	height: 3em;
+	margin: 0 2em;
+}
+img {
+	width: 1em;
+}
+.message {
+	margin: 0 0 1em 0;
+	padding: 1em;
+}
+#pomodoro-num {
+	width: 5em;
+}
+#task-controller {
+	margin: .5em 0 0 0;
+	height: 1.5em;
+}
+#drop-here{
+	padding: .5em;
+	height: 10em;
+	background-color: gray;
+	color: white;
+	z-index: 0;
+}
+
+.task{
+	box-sizing: border-box;
+	width: 100%;
+	height: 10em;
+	margin: 1em auto;
+	padding: 1em;
+	border-radius: 1em;
+	z-index: 1;
+}
+.content {
+	height: 6em;
+	overflow: scroll;
+}
+.section{
+	font-size: large;
+	margin: 0 0 1em 0;
+}
+
+.todo{
+	background-color: #ffeb3b;
+}
+
+.done {
+	background-color: rgb(236, 240, 241);
+}
