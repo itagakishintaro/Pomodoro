@@ -37,6 +37,7 @@ var OPTIONS = {
 var current_status = STATUS.WORKING;
 var intervalID;
 var current_time = 0;
+var inMusic;
 
 $(function() {
     setupTimer();
@@ -45,12 +46,21 @@ $(function() {
         startTimer(PERIOD[current_status]);
         $('#start').toggleClass('disabled');
         $('#pause').toggleClass('disabled');
+        if(inMusic){
+            audio.play();
+        }
     });
 
     $('#pause').click(function() {
         clearInterval(intervalID);
         $('#start').toggleClass('disabled');
         $('#pause').toggleClass('disabled');
+        if(!audio.paused){
+            inMusic = true;
+            audioStop();
+        } else {
+            inMusic = false;
+        }
     });
 
     $('#reset').click(function() {
