@@ -9,8 +9,8 @@ var STATUS = {
     RESTING: 'RESTING'
 };
 var PERIOD = {
-    WORKING: 1 * 60,
-    RESTING: 1 * 60
+    WORKING: 25 * 60,
+    RESTING: 5 * 60
 };
 var OPTIONS = {
     WORKING: {
