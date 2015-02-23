@@ -6,7 +6,11 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
+    
+    <!-- for smartphone -->
+    <!-- http://stackoverflow.com/questions/15194940/phonegap-application-text-and-layout-too-small -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
     <title>Pomodoro</title>
 
     <!-- Bootstrap -->
@@ -116,6 +120,7 @@
     <script src="js/jquery.easypiechart.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script><!-- for smartphone draggable -->
     <script src="js/web-storage.js"></script>
     <script src="js/date-formatter.js"></script>
     <script src="js/pomodoro-timer.js"></script>

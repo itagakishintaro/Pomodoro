@@ -9,8 +9,8 @@ var STATUS = {
     RESTING: 'RESTING'
 };
 var PERIOD = {
-    WORKING: 1 * 60,
-    RESTING: 1 * 60
+    WORKING: 25 * 60,
+    RESTING: 5 * 60
 };
 var OPTIONS = {
     WORKING: {
@@ -37,6 +37,7 @@ var OPTIONS = {
 var current_status = STATUS.WORKING;
 var intervalID;
 var current_time = 0;
+var inMusic;
 
 $(function() {
     setupTimer();
@@ -45,12 +46,19 @@ $(function() {
         startTimer(PERIOD[current_status]);
         $('#start').toggleClass('disabled');
         $('#pause').toggleClass('disabled');
+        if(inMusic){
+            audio.play();
+        }
     });
 
     $('#pause').click(function() {
         clearInterval(intervalID);
         $('#start').toggleClass('disabled');
         $('#pause').toggleClass('disabled');
+        if(!audio.paused){
+            inMusic = true;
+            audioStop();
+        }
     });
 
     $('#reset').click(function() {

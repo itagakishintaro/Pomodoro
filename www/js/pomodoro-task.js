@@ -13,7 +13,7 @@ $(function() {
         location.reload();
     });
     // Read web storage
-    if (storage.length > 0) {
+    if (storage.getItem('max_id')) {
         max_id = storage.getItem('max_id');
         todo = JSON.parse(storage.getItem('todo'));
         done = JSON.parse(storage.getItem('done'));
