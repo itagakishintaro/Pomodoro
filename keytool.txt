@@ -1,0 +1,7 @@
+keytool -genkey -v -keystore pomodoro.keystore -alias pomodoro -keyalg RSA -keysize 2048 -validity 10000
+Add key on Phonegap build
+
+1- Go to https://build.phonegap.com/people/edit under Private Keys tab
+2- Look at android section and set a default key
+3- Click the 'Lock' button to unlock.
+4- Try rebuild
