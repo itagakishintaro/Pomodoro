@@ -14,12 +14,11 @@
 	height: 3em;
 	margin: 0 2em;
 }
-img {
+.tomato {
 	width: 1em;
 }
 .message {
-	margin: 0 0 1em 0;
-	padding: 1em;
+	padding: 0 0 1em 2em;
 }
 #pomodoro-num {
 	width: 5em;
@@ -27,13 +26,6 @@ img {
 #task-controller {
 	margin: .5em 0 0 0;
 	height: 1.5em;
-}
-#drop-here{
-	padding: .5em;
-	height: 10em;
-	background-color: gray;
-	color: white;
-	z-index: 0;
 }
 
 .task{

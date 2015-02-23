@@ -17,19 +17,24 @@
 <body>
     <div class="container">
         <h1>
-            <img src="img/tomato.png" alt="tomato">
+            <img src="img/tomato.png" alt="tomato" class="tomato">
             Pomodoro
         </h1>
-        <p class="message">
-            What's the pomodoro? Please access
-            <a href="http://pomodorotechnique.com/" target="_blank">here</a>.
-            <button id="all-clear" class="btn btn-danger pull-right">All Clear</button>
-        </p>
+        <div class="row">
+            <div class="col-md-10 message">
+                What's the pomodoro? Please access
+                <a href="http://pomodorotechnique.com/" target="_blank">here</a>.
+            </div>
+            <div class="col-md-2">
+                <!-- <button id="all-clear" class="btn btn-warning pull-right">All Clear</button> -->
+            </div>
+        </div>
 
         <div class="row">
             <!-- timer START -->
             <div class="col-md-4">
-                <div class="section"><span class="label label-info">Timer</span></div>
+                <div class="section"><span class="label label-info">Timer</span>
+                </div>
                 <div id="working-timer" class="text-center" data-percent="0">
                     <span class="status">Working</span>
                     <span id="working-time-view" class="time-view"></span>
@@ -47,7 +52,8 @@
             </div>
             <!-- timer END, todo START -->
             <div class="col-md-4">
-                <div class="section"><span class="label label-info">ToDo</span></div>
+                <div class="section"><span class="label label-info">ToDo</span>
+                </div>
                 <!-- "add task" START -->
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                     <div class="panel panel-default">
@@ -81,13 +87,26 @@
             </div>
             <!-- todo end, done start -->
             <div class="col-md-4">
-                <div class="section"><span class="label label-info">Done</span></div>
-                <div id="drop-here">Tap [Finish] button or drop here.</div>
+                <div class="section"><span class="label label-info">Done</span>
+                </div>
                 <div id="done-area"></div>
             </div>
             <!-- done end -->
         </div>
         <!-- end row -->
+        <hr>
+        <div class="row">
+            <div class="col-md-10">
+                This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>. / Music is <a href="http://musicisvfr.com/">VFR</a>
+            </div>
+            <div class="col-md-2 pull-right">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+                </a>
+            </div>
+        </div>
+    </div>
+
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -100,6 +119,7 @@
     <script src="js/web-storage.js"></script>
     <script src="js/date-formatter.js"></script>
     <script src="js/pomodoro-timer.js"></script>
+    <script src="js/audio.js"></script>
     <script src="js/pomodoro-task.js"></script>
     <!-- need for phonegap. Don't search cordova.js file -->
     <script type="text/javascript" src="cordova.js"></script>
