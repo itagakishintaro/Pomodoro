@@ -9,8 +9,8 @@ var STATUS = {
     RESTING: 'RESTING'
 };
 var PERIOD = {
-    WORKING: 25 * 60,
-    RESTING: 5 * 60
+    WORKING: 1 * 60,
+    RESTING: 1 * 60
 };
 var OPTIONS = {
     WORKING: {
@@ -58,6 +58,8 @@ $(function() {
         if(!audio.paused){
             inMusic = true;
             audioStop();
+        } else{
+            inMusic = false;
         }
     });
 
