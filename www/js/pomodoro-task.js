@@ -76,7 +76,7 @@ function setTodoTasks() {
 }
 
 function setDeleteEvent(object) {
-    $('[data-id="' + object.id + '"] .delete').click(function() {
+    $('[data-id="' + object.id + '"] .delete').on('touchend', function() {
         todo = todo.filter(function(element) {
             return (element.id !== object.id);
         });
@@ -89,7 +89,7 @@ function setDeleteEvent(object) {
 }
 
 function setFinishEvent(object) {
-    $('[data-id="' + object.id + '"] .finish').click(function() {
+    $('[data-id="' + object.id + '"] .finish').on('touchend', function() {
         todo = todo.filter(function(element) {
             return (element.id !== object.id);
         });
